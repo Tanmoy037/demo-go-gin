@@ -1,1 +1,1 @@
-# semaphore-demo-go-gin
+# Semaphore-demo-go-gin
