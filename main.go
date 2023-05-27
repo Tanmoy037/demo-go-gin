@@ -1,12 +1,13 @@
 package main
 
 import (
-	"main"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"golang.org/x/net/route"
 )
+
+var router *gin.Engine
 
 func main(){
 	router := gin.Default()
@@ -22,16 +23,13 @@ func main(){
 			// Use the index.html template
 			"index.html",
 			//pass the data that the page uses (in the case, 'title')
-			git.H{
+			gin.H{
 				"title": "Home Page",
 			},
 		)
 
-
-
-
-
-
 	})
+
+	router.Run()
 
 }
